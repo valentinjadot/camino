@@ -1,0 +1,16 @@
+.volume {
+    position: absolute;
+    display: none;
+    @include absCenter;
+    top: 60vh;
+    z-index: 80;
+
+    &__checkbox {
+        display: none;
+    }
+    &__logo {
+        width: 2.5rem;
+        float: right;
+        margin-left: 1rem;
+    }
+}

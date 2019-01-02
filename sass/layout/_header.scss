@@ -1,0 +1,35 @@
+.header {
+    position: relative;
+    height: 95vh; //  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.3), rgba($color-primary-dark, 0.3)), url(../../medias/photos/Vue/vue.jpg);
+    //  background-size: cover;
+    //  background-position: top;
+    //  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+    margin-top: -5rem;
+    padding-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -100;
+    transition: all 1s;
+    &__logo-box {
+        position: absolute;
+        top: 40rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 1rem; //     border: 1px solid white;
+        //     padding: 10rem;
+    }
+
+    &__construct {
+        height: 108vh;
+    }
+}

@@ -1,0 +1,101 @@
+.portrait {
+    width: 100%;
+   // height: 95vh;
+    display: flex;
+    justify-content:space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    &__carte {
+        flex:0 0 calc(((100% - 2 * #{$goutiere})/3)); 
+        overflow: hidden;
+       margin-bottom: $goutiere;
+     
+          
+        position: relative;
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        &:hover .portrait__side--front {
+            transform: rotateY(-180deg);
+        }
+        &:hover .portrait__side--back {
+            transform: rotateY(0);
+        }
+        @include respond(tab-port) {
+            flex:0 0 100%; 
+            margin-right: 0;
+        }
+    }
+    &__nom {
+        position: absolute;
+        font-size: $default-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+        color:#353535;
+        background: rgba(white, 1);
+        &--front {
+            top: 1rem;
+            left: 1.5rem;
+            padding: 2px 1rem;
+        }
+        &--back {
+            top: 0;
+            left: 0;
+            @include respond(tab-port) {
+                width: 60%;
+                top:15%;
+                left:50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__photo {
+         width: 100%;
+        &--hidden {
+            opacity: 0;
+        }
+    }
+    &__side {
+        transition: all .8s ease;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg);
+        }
+    }
+    &__text {
+        position: absolute;
+        top: 3rem;
+        left: 0rem;
+        &>p {
+            font-size: 1.3rem;
+            }
+
+        @include respond(tab-port) {
+            width: 60%;
+            top:22%;
+            left:50%;
+            transform: translateX(-50%);
+        
+            &>p {
+                font-size: 2rem;
+                }
+        }
+    }
+    &__instagram--link {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: black;
+    }
+    &__instagram--img {
+        width: 3rem;
+        margin:0 1rem 0 0;
+        vertical-align: middle;
+    }
+}

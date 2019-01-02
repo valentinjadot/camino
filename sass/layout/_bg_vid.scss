@@ -1,0 +1,26 @@
+/* .bg_vid__shade {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(95vh + 10rem);
+    width: 200%;
+    margin-top: -10rem;
+    background-color: rgba(0, 0, 0, 0.6); //Change as per your requirement
+    z-index: -100;
+} */
+
+#bg_vid__video {
+    position: fixed;
+    top: -8rem;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -200;
+    object-fit: cover; // -webkit-filter: blur(1px);
+    background-image: url(/medias/photos/divers/vue_libellules_frame+.jpg);
+    margin: auto; // -moz-filter: blur(1px);
+    // -o-filter: blur(1px);
+    // -ms-filter: blur(1px);
+    // filter: blur(1px);
+}

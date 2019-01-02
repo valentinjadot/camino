@@ -1,0 +1,43 @@
+.reviews {
+    &__row {
+        width: 100%;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+    &__pic {
+        position: absolute;
+        width: 10rem;
+        height: auto;
+        border-radius: 1000px;
+    }
+    &__starsContainer {
+        position: absolute;
+        top: 15rem;
+        display: flex;
+    }
+    &__nom {
+        position: absolute;
+        top: 11rem;
+        display: block;
+        width: 10rem;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    &__star {
+        width: 2rem;
+        height: 2rem;
+        &--yellow {
+            fill: goldenrod;
+        }
+    }
+    &__text {
+        display: inline-block;
+        margin: 0;
+        margin-left: 13rem;
+    }
+    &__more {
+        margin: 5rem 0;
+    }
+}

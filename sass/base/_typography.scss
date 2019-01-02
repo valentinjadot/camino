@@ -1,0 +1,169 @@
+body {
+    font-family: $text-font;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $val-gris-fonce;
+}
+
+.heading-primary {
+    color: $color-white;
+    font-family: $fancy-font;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    &--main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        word-spacing: 2rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        @include respond(phone) {
+            word-spacing: 1rem;
+            font-size: 3rem;
+        }
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+    }
+    &--entre {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1rem;
+    }
+    &--sub {
+        display: block;
+        font-size: 2.7rem;
+        font-weight: 700;
+        letter-spacing: 1rem;
+        animation: moveInRight 1s ease-out;
+        @include respond(phone) {
+            font-size: 2rem;
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+h2 {
+    font-size: 4rem; // text-transform: uppercase;
+    font-family: $fancy-font;
+    display: inline-block; // -webkit-background-clip: text;
+    // color: transparent;
+    color: $val-gris-clair;
+    transition: all .2s;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    @include respond(tab-port) {
+        font-size: 3.5rem;
+    }
+    @include respond(phone) {
+        font-size: 2.5rem;
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-family: $fancy-font;
+    text-emphasis: em;
+}
+
+p,
+blockquote {
+    font-size: $default-font-size;
+    @include respond(tab-port) {
+        font-size: 2rem;
+    }
+    text-align: justify;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+blockquote {
+    margin: 7rem 6rem;
+    padding: 1rem 2.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-family: $fancy-font;
+    font-size: 1.8rem;
+    @include respond(phone) {
+        padding: 0;
+    }
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+.reviews__text p {
+    display: inline-block;
+    margin: 1rem 0;
+    font-family: $text-font;
+    &:first-child {
+        display: inline;
+    }
+}
+
+.twoCollumns {
+    column-count: 2;
+    hyphen: auto;
+    column-gap: 10rem; //1em = 14px;
+    column-rule: 2px solid $color-grey-light-2;
+}
+
+.oneCollumn {
+    hyphen: auto;
+    width: calc(100% - 50rem);
+    @include respond(tab-port) {
+        width: 100%;
+    }
+}
+
+.email {
+    display: inline-block;
+    margin: 0 7rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #272727;
+    &:hover {
+        color: #93997e;
+    }
+}
+
+.reviews__nom {
+    font-family: $fancy-font;
+}
+
+.creux {
+    display: inline-block;
+    width: 0rem;
+    transition: width .1s;
+}
+
+.exterieur {
+    font-size: 2rem;
+    color: $couleur-vert-fonce;
+    border-bottom: 1px dashed currentColor;
+    text-decoration: none;
+}
+
+.exterieur:hover {
+    color: white;
+    background-color: $couleur-vert-fonce;
+}
+
+.exterieur:hover .creux {
+    width: .8rem;
+}

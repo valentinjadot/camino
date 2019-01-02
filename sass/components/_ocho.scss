@@ -1,0 +1,85 @@
+/** LIGHTBOX MARKUP **/
+
+.ocho {
+    margin: 7rem 0;
+    padding-top: $goutiere; //  border: 2px solid $color-grey-light-2;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    @include respond(phone) {
+        margin: 3rem 0;
+    }
+}
+
+/* 
+.thumb_container {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border: 1px solid red;
+} */
+
+.thumbnail {
+    width: 100%; //      margin-right: $goutiere;
+    //  } //  box-shadow: 0 0.3rem 0.6rem rgba(black, 0.13), 0 0.3rem 0.6rem rgba(black, 0.23);
+    //  border: 0.5rem solid white;
+    transition: transform 0.1s;
+    transition-timing-function: ease-out;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0.3rem 0.6rem rgba(black, 0.13), 0 0.3rem 0.6rem rgba(black, 0.23); // box-shadow: 0 0.6rem 0.6rem rgba(black, 0.23), 0 0.6rem 0.6rem rgba(black, 0.23);
+    }
+    @include respond(tab-port) {
+        &:hover {
+            transform: scale(1);
+            box-shadow: none; // box-shadow: 0 0.6rem 0.6rem rgba(black, 0.23), 0 0.6rem 0.6rem rgba(black, 0.23);
+        }
+    } //  border-radius: 500000px;
+}
+
+.ocho a {
+    flex: 0 0 calc(((100% - 2 * #{$goutiere})/3) - 5px);
+    text-decoration: none;
+    /*    &:not(:last-child) {
+        margin-right: $goutiere;
+    } */
+    margin-bottom: $goutiere;
+    @include respond(tab-port) {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+}
+
+.lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+    /** Position and style */
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    max-width: 95%;
+    max-height: 85%;
+    margin-top: 3%;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+    /** Unhide lightbox **/
+    display: block; // I remove the possibility to click on the picture to increase it size (display in a 'lightbox') as the pictures are now 100% width of the section 
+    @include respond(tab-port) {
+        display: none;
+    }
+}

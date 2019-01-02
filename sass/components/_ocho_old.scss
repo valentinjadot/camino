@@ -1,0 +1,19 @@
+.ocho {
+    width: 100%;
+    margin: 2rem 0;
+    &__linkbox {
+        &:not(:last-child) {
+            margin-right: $goutiere;
+        }
+    }
+    &__img--petite {
+        width: calc(((100% - 7 * #{$goutiere})/8 - 5px));
+        display: inline-block;
+        position: relative;
+        border: 0.5rem solid white;
+        box-shadow: 0 3px 6px rgba(black, 0.13), 0 3px 6px rgba(black, 0.23);
+    }
+    &__img--grande {
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+ .hublot {
+     overflow: hidden;
+     float: right;
+     width: 40rem;
+     height: 40rem;
+     clip-path: circle(20rem); //  shape-outside: circle(22rem);
+     margin: 5rem 0 0 10rem;
+     @include respond(tab-port) {
+         float: none;
+         width: 100%;
+         height: auto;
+         margin: 0;
+         margin-bottom: 6rem;
+         clip-path: none;
+     }
+     @include respond(phone) {}
+     &__img {
+         margin-top: 5px;
+         margin-left: -5px;
+         width: 45rem;
+     }
+     & video {
+         width: 80rem;
+         transform: translateX(-13%);
+         @include respond(tab-port) {
+             width: 100%;
+             height: auto;
+             transform: none;
+         }
+     }
+ }
